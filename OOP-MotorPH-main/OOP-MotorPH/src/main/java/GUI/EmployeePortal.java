@@ -42,19 +42,19 @@ public class EmployeePortal extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextPane1 = new javax.swing.JTextPane();
+        addressField = new javax.swing.JTextPane();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTextPane2 = new javax.swing.JTextPane();
+        contactField = new javax.swing.JTextPane();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jTextPane3 = new javax.swing.JTextPane();
+        emailField = new javax.swing.JTextPane();
         jScrollPane4 = new javax.swing.JScrollPane();
-        jTextPane4 = new javax.swing.JTextPane();
+        statusField = new javax.swing.JTextPane();
         jScrollPane5 = new javax.swing.JScrollPane();
-        jTextPane5 = new javax.swing.JTextPane();
+        birthdayField = new javax.swing.JTextPane();
         jScrollPane6 = new javax.swing.JScrollPane();
-        jTextPane6 = new javax.swing.JTextPane();
+        lastNameField = new javax.swing.JTextPane();
         jScrollPane7 = new javax.swing.JScrollPane();
-        jTextPane7 = new javax.swing.JTextPane();
+        firstNameField = new javax.swing.JTextPane();
         jPanel5 = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
@@ -63,15 +63,15 @@ public class EmployeePortal extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         jScrollPane8 = new javax.swing.JScrollPane();
-        jTextPane8 = new javax.swing.JTextPane();
+        basicSalaryField = new javax.swing.JTextPane();
         jScrollPane9 = new javax.swing.JScrollPane();
-        jTextPane9 = new javax.swing.JTextPane();
+        hourlyRateField = new javax.swing.JTextPane();
         jScrollPane10 = new javax.swing.JScrollPane();
-        jTextPane10 = new javax.swing.JTextPane();
+        riceSubField = new javax.swing.JTextPane();
         jScrollPane11 = new javax.swing.JScrollPane();
-        jTextPane11 = new javax.swing.JTextPane();
+        phoneSubField = new javax.swing.JTextPane();
         jScrollPane12 = new javax.swing.JScrollPane();
-        jTextPane12 = new javax.swing.JTextPane();
+        clothingField = new javax.swing.JTextPane();
         jPanel6 = new javax.swing.JPanel();
         jLabel17 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
@@ -79,15 +79,15 @@ public class EmployeePortal extends javax.swing.JFrame {
         jLabel20 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
         jScrollPane13 = new javax.swing.JScrollPane();
-        jTextPane13 = new javax.swing.JTextPane();
+        sssField = new javax.swing.JTextPane();
         jScrollPane14 = new javax.swing.JScrollPane();
-        jTextPane14 = new javax.swing.JTextPane();
+        pagIbigField = new javax.swing.JTextPane();
         jScrollPane15 = new javax.swing.JScrollPane();
-        jTextPane15 = new javax.swing.JTextPane();
+        philHealthField = new javax.swing.JTextPane();
         jScrollPane16 = new javax.swing.JScrollPane();
-        jTextPane16 = new javax.swing.JTextPane();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        taxField = new javax.swing.JTextPane();
+        requestLeaveButton = new javax.swing.JButton();
+        viewPayslipButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 0, 0));
@@ -166,19 +166,19 @@ public class EmployeePortal extends javax.swing.JFrame {
 
         jLabel10.setText("Current address: ");
 
-        jScrollPane1.setViewportView(jTextPane1);
+        jScrollPane1.setViewportView(addressField);
 
-        jScrollPane2.setViewportView(jTextPane2);
+        jScrollPane2.setViewportView(contactField);
 
-        jScrollPane3.setViewportView(jTextPane3);
+        jScrollPane3.setViewportView(emailField);
 
-        jScrollPane4.setViewportView(jTextPane4);
+        jScrollPane4.setViewportView(statusField);
 
-        jScrollPane5.setViewportView(jTextPane5);
+        jScrollPane5.setViewportView(birthdayField);
 
-        jScrollPane6.setViewportView(jTextPane6);
+        jScrollPane6.setViewportView(lastNameField);
 
-        jScrollPane7.setViewportView(jTextPane7);
+        jScrollPane7.setViewportView(firstNameField);
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -265,15 +265,15 @@ public class EmployeePortal extends javax.swing.JFrame {
 
         jLabel16.setText("Clothing:");
 
-        jScrollPane8.setViewportView(jTextPane8);
+        jScrollPane8.setViewportView(basicSalaryField);
 
-        jScrollPane9.setViewportView(jTextPane9);
+        jScrollPane9.setViewportView(hourlyRateField);
 
-        jScrollPane10.setViewportView(jTextPane10);
+        jScrollPane10.setViewportView(riceSubField);
 
-        jScrollPane11.setViewportView(jTextPane11);
+        jScrollPane11.setViewportView(phoneSubField);
 
-        jScrollPane12.setViewportView(jTextPane12);
+        jScrollPane12.setViewportView(clothingField);
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -344,13 +344,13 @@ public class EmployeePortal extends javax.swing.JFrame {
 
         jLabel21.setText("Tax: ");
 
-        jScrollPane13.setViewportView(jTextPane13);
+        jScrollPane13.setViewportView(sssField);
 
-        jScrollPane14.setViewportView(jTextPane14);
+        jScrollPane14.setViewportView(pagIbigField);
 
-        jScrollPane15.setViewportView(jTextPane15);
+        jScrollPane15.setViewportView(philHealthField);
 
-        jScrollPane16.setViewportView(jTextPane16);
+        jScrollPane16.setViewportView(taxField);
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -408,29 +408,29 @@ public class EmployeePortal extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jButton1.setBackground(new java.awt.Color(102, 102, 102));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Request Leave");
-        jButton1.setMaximumSize(new java.awt.Dimension(85, 20));
-        jButton1.setMinimumSize(new java.awt.Dimension(85, 20));
-        jButton1.setPreferredSize(new java.awt.Dimension(85, 20));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        requestLeaveButton.setBackground(new java.awt.Color(102, 102, 102));
+        requestLeaveButton.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        requestLeaveButton.setForeground(new java.awt.Color(255, 255, 255));
+        requestLeaveButton.setText("Request Leave");
+        requestLeaveButton.setMaximumSize(new java.awt.Dimension(85, 20));
+        requestLeaveButton.setMinimumSize(new java.awt.Dimension(85, 20));
+        requestLeaveButton.setPreferredSize(new java.awt.Dimension(85, 20));
+        requestLeaveButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                requestLeaveButtonActionPerformed(evt);
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(102, 102, 102));
-        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("View Payslip");
-        jButton2.setMaximumSize(new java.awt.Dimension(85, 20));
-        jButton2.setMinimumSize(new java.awt.Dimension(85, 20));
-        jButton2.setPreferredSize(new java.awt.Dimension(85, 20));
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        viewPayslipButton.setBackground(new java.awt.Color(102, 102, 102));
+        viewPayslipButton.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        viewPayslipButton.setForeground(new java.awt.Color(255, 255, 255));
+        viewPayslipButton.setText("View Payslip");
+        viewPayslipButton.setMaximumSize(new java.awt.Dimension(85, 20));
+        viewPayslipButton.setMinimumSize(new java.awt.Dimension(85, 20));
+        viewPayslipButton.setPreferredSize(new java.awt.Dimension(85, 20));
+        viewPayslipButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                viewPayslipButtonActionPerformed(evt);
             }
         });
 
@@ -450,9 +450,9 @@ public class EmployeePortal extends javax.swing.JFrame {
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(64, 64, 64)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(requestLeaveButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(viewPayslipButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(22, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
@@ -460,8 +460,8 @@ public class EmployeePortal extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(14, 14, 14)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(requestLeaveButton, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(viewPayslipButton, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(27, 27, 27)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -496,13 +496,13 @@ public class EmployeePortal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void requestLeaveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_requestLeaveButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_requestLeaveButtonActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void viewPayslipButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewPayslipButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_viewPayslipButtonActionPerformed
 
     private void LogOutButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogOutButtonActionPerformed
 
@@ -548,8 +548,14 @@ public class EmployeePortal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton LogOutButton;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JTextPane addressField;
+    private javax.swing.JTextPane basicSalaryField;
+    private javax.swing.JTextPane birthdayField;
+    private javax.swing.JTextPane clothingField;
+    private javax.swing.JTextPane contactField;
+    private javax.swing.JTextPane emailField;
+    private javax.swing.JTextPane firstNameField;
+    private javax.swing.JTextPane hourlyRateField;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -593,21 +599,15 @@ public class EmployeePortal extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JScrollPane jScrollPane9;
-    private javax.swing.JTextPane jTextPane1;
-    private javax.swing.JTextPane jTextPane10;
-    private javax.swing.JTextPane jTextPane11;
-    private javax.swing.JTextPane jTextPane12;
-    private javax.swing.JTextPane jTextPane13;
-    private javax.swing.JTextPane jTextPane14;
-    private javax.swing.JTextPane jTextPane15;
-    private javax.swing.JTextPane jTextPane16;
-    private javax.swing.JTextPane jTextPane2;
-    private javax.swing.JTextPane jTextPane3;
-    private javax.swing.JTextPane jTextPane4;
-    private javax.swing.JTextPane jTextPane5;
-    private javax.swing.JTextPane jTextPane6;
-    private javax.swing.JTextPane jTextPane7;
-    private javax.swing.JTextPane jTextPane8;
-    private javax.swing.JTextPane jTextPane9;
+    private javax.swing.JTextPane lastNameField;
+    private javax.swing.JTextPane pagIbigField;
+    private javax.swing.JTextPane philHealthField;
+    private javax.swing.JTextPane phoneSubField;
+    private javax.swing.JButton requestLeaveButton;
+    private javax.swing.JTextPane riceSubField;
+    private javax.swing.JTextPane sssField;
+    private javax.swing.JTextPane statusField;
+    private javax.swing.JTextPane taxField;
+    private javax.swing.JButton viewPayslipButton;
     // End of variables declaration//GEN-END:variables
 }

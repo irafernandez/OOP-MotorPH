@@ -235,21 +235,19 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
-                                      <Component id="AdminPortalTXT" min="-2" pref="209" max="-2" attributes="0"/>
-                                      <EmptySpace pref="18" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
-                                      <Component id="welcomeBack" min="-2" pref="209" max="-2" attributes="0"/>
-                                  </Group>
                                   <Component id="line" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace min="21" pref="21" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="AdminPortalTXT" alignment="0" min="-2" pref="209" max="-2" attributes="0"/>
+                                          <Component id="welcomeBack" alignment="0" min="-2" pref="209" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
                               </Group>
                               <EmptySpace min="-2" pref="165" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
-                              <Component id="UpdateEmpDetailsPortal1" min="-2" pref="240" max="-2" attributes="0"/>
+                              <Component id="viewPayrollRepPortal" min="-2" pref="240" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="169" max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -271,7 +269,7 @@
                           <Component id="UpdateEmpDetailsPortal" alignment="3" min="-2" pref="62" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="UpdateEmpDetailsPortal1" min="-2" pref="62" max="-2" attributes="0"/>
+                      <Component id="viewPayrollRepPortal" min="-2" pref="62" max="-2" attributes="0"/>
                       <EmptySpace pref="11" max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -365,7 +363,7 @@
                 <Property name="text" type="java.lang.String" value="to Admin Portal"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="UpdateEmpDetailsPortal1">
+            <Component class="javax.swing.JButton" name="viewPayrollRepPortal">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -379,7 +377,7 @@
                 <Property name="text" type="java.lang.String" value="View Payroll Reports"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="UpdateEmpDetailsPortal1ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="viewPayrollRepPortalActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>

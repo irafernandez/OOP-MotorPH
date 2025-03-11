@@ -151,9 +151,9 @@
                       <Group type="102" attributes="0">
                           <Component id="jLabel2" min="-2" pref="301" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
-                          <Component id="jButton1" min="-2" pref="130" max="-2" attributes="0"/>
+                          <Component id="requestLeaveButton" min="-2" pref="130" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="jButton2" min="-2" pref="130" max="-2" attributes="0"/>
+                          <Component id="viewPayslipButton" min="-2" pref="130" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace pref="22" max="32767" attributes="0"/>
@@ -165,8 +165,8 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jButton1" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
-                      <Component id="jButton2" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
+                      <Component id="requestLeaveButton" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
+                      <Component id="viewPayslipButton" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                       <Component id="jLabel2" alignment="3" min="-2" pref="51" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
@@ -339,7 +339,7 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JTextPane" name="jTextPane1">
+                <Component class="javax.swing.JTextPane" name="addressField">
                 </Component>
               </SubComponents>
             </Container>
@@ -350,7 +350,7 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JTextPane" name="jTextPane2">
+                <Component class="javax.swing.JTextPane" name="contactField">
                 </Component>
               </SubComponents>
             </Container>
@@ -361,7 +361,7 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JTextPane" name="jTextPane3">
+                <Component class="javax.swing.JTextPane" name="emailField">
                 </Component>
               </SubComponents>
             </Container>
@@ -372,7 +372,7 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JTextPane" name="jTextPane4">
+                <Component class="javax.swing.JTextPane" name="statusField">
                 </Component>
               </SubComponents>
             </Container>
@@ -383,7 +383,7 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JTextPane" name="jTextPane5">
+                <Component class="javax.swing.JTextPane" name="birthdayField">
                 </Component>
               </SubComponents>
             </Container>
@@ -394,7 +394,7 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JTextPane" name="jTextPane6">
+                <Component class="javax.swing.JTextPane" name="lastNameField">
                 </Component>
               </SubComponents>
             </Container>
@@ -405,7 +405,7 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JTextPane" name="jTextPane7">
+                <Component class="javax.swing.JTextPane" name="firstNameField">
                 </Component>
               </SubComponents>
             </Container>
@@ -531,7 +531,7 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JTextPane" name="jTextPane8">
+                <Component class="javax.swing.JTextPane" name="basicSalaryField">
                 </Component>
               </SubComponents>
             </Container>
@@ -542,7 +542,7 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JTextPane" name="jTextPane9">
+                <Component class="javax.swing.JTextPane" name="hourlyRateField">
                 </Component>
               </SubComponents>
             </Container>
@@ -553,7 +553,7 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JTextPane" name="jTextPane10">
+                <Component class="javax.swing.JTextPane" name="riceSubField">
                 </Component>
               </SubComponents>
             </Container>
@@ -564,7 +564,7 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JTextPane" name="jTextPane11">
+                <Component class="javax.swing.JTextPane" name="phoneSubField">
                 </Component>
               </SubComponents>
             </Container>
@@ -575,7 +575,7 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JTextPane" name="jTextPane12">
+                <Component class="javax.swing.JTextPane" name="clothingField">
                 </Component>
               </SubComponents>
             </Container>
@@ -697,7 +697,7 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JTextPane" name="jTextPane13">
+                <Component class="javax.swing.JTextPane" name="sssField">
                 </Component>
               </SubComponents>
             </Container>
@@ -708,7 +708,7 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JTextPane" name="jTextPane14">
+                <Component class="javax.swing.JTextPane" name="pagIbigField">
                 </Component>
               </SubComponents>
             </Container>
@@ -719,7 +719,7 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JTextPane" name="jTextPane15">
+                <Component class="javax.swing.JTextPane" name="philHealthField">
                 </Component>
               </SubComponents>
             </Container>
@@ -730,13 +730,13 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JTextPane" name="jTextPane16">
+                <Component class="javax.swing.JTextPane" name="taxField">
                 </Component>
               </SubComponents>
             </Container>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JButton" name="jButton1">
+        <Component class="javax.swing.JButton" name="requestLeaveButton">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="66" green="66" red="66" type="rgb"/>
@@ -759,10 +759,10 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="requestLeaveButtonActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton2">
+        <Component class="javax.swing.JButton" name="viewPayslipButton">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="66" green="66" red="66" type="rgb"/>
@@ -785,7 +785,7 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="viewPayslipButtonActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>

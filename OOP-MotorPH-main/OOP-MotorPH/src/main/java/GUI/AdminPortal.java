@@ -34,7 +34,7 @@ public class AdminPortal extends javax.swing.JFrame {
         welcomeBack = new javax.swing.JLabel();
         line = new javax.swing.JPanel();
         AdminPortalTXT = new javax.swing.JLabel();
-        UpdateEmpDetailsPortal1 = new javax.swing.JButton();
+        viewPayrollRepPortal = new javax.swing.JButton();
         LogOutButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -174,13 +174,13 @@ public class AdminPortal extends javax.swing.JFrame {
         AdminPortalTXT.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         AdminPortalTXT.setText("to Admin Portal");
 
-        UpdateEmpDetailsPortal1.setBackground(new java.awt.Color(255, 255, 255));
-        UpdateEmpDetailsPortal1.setFont(new java.awt.Font("STXihei", 1, 14)); // NOI18N
-        UpdateEmpDetailsPortal1.setForeground(new java.awt.Color(0, 0, 0));
-        UpdateEmpDetailsPortal1.setText("View Payroll Reports");
-        UpdateEmpDetailsPortal1.addActionListener(new java.awt.event.ActionListener() {
+        viewPayrollRepPortal.setBackground(new java.awt.Color(255, 255, 255));
+        viewPayrollRepPortal.setFont(new java.awt.Font("STXihei", 1, 14)); // NOI18N
+        viewPayrollRepPortal.setForeground(new java.awt.Color(0, 0, 0));
+        viewPayrollRepPortal.setText("View Payroll Reports");
+        viewPayrollRepPortal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                UpdateEmpDetailsPortal1ActionPerformed(evt);
+                viewPayrollRepPortalActionPerformed(evt);
             }
         });
 
@@ -199,17 +199,15 @@ public class AdminPortal extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(line, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(21, 21, 21)
-                                .addComponent(AdminPortalTXT, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(21, 21, 21)
-                                .addComponent(welcomeBack, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(line, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(AdminPortalTXT, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(welcomeBack, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(165, 165, 165))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(UpdateEmpDetailsPortal1, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(viewPayrollRepPortal, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(169, 169, 169))))
         );
         jPanel1Layout.setVerticalGroup(
@@ -226,7 +224,7 @@ public class AdminPortal extends javax.swing.JFrame {
                     .addComponent(ViewEmpDetailsPortal, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(UpdateEmpDetailsPortal, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(UpdateEmpDetailsPortal1, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(viewPayrollRepPortal, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(11, Short.MAX_VALUE))
         );
 
@@ -327,9 +325,9 @@ public class AdminPortal extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_exitButtonMouseClicked
 
-    private void UpdateEmpDetailsPortal1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UpdateEmpDetailsPortal1ActionPerformed
+    private void viewPayrollRepPortalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewPayrollRepPortalActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_UpdateEmpDetailsPortal1ActionPerformed
+    }//GEN-LAST:event_viewPayrollRepPortalActionPerformed
 
     /**
      * @param args the command line arguments
@@ -373,7 +371,6 @@ public class AdminPortal extends javax.swing.JFrame {
     private javax.swing.JLabel M;
     private javax.swing.JLabel P;
     private javax.swing.JButton UpdateEmpDetailsPortal;
-    private javax.swing.JButton UpdateEmpDetailsPortal1;
     private javax.swing.JButton ViewEmpDetailsPortal;
     private javax.swing.JLabel exitButton;
     private javax.swing.JPanel jPanel1;
@@ -381,6 +378,7 @@ public class AdminPortal extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel line;
     private javax.swing.JLabel minimizeButton;
+    private javax.swing.JButton viewPayrollRepPortal;
     private javax.swing.JLabel welcomeBack;
     // End of variables declaration//GEN-END:variables
 }

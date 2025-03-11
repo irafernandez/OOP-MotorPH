@@ -33,13 +33,13 @@ public class HR extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        empInfoTable = new javax.swing.JTable();
+        addEmpButton = new javax.swing.JButton();
+        searchButton = new javax.swing.JButton();
+        searchField = new javax.swing.JTextField();
+        archiveButton = new javax.swing.JButton();
+        editButton = new javax.swing.JButton();
+        generatePayslipButton = new javax.swing.JButton();
 
         jButton6.setText("jButton6");
 
@@ -84,8 +84,8 @@ public class HR extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("HUMAN RESOURCE PORTAL");
 
-        jTable1.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        empInfoTable.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
+        empInfoTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
                 {null, null, null, null, null},
@@ -115,44 +115,44 @@ public class HR extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
-        jTable1.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_INTERVAL_SELECTION);
-        jTable1.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
-        jTable1.setShowGrid(true);
-        jScrollPane1.setViewportView(jTable1);
+        empInfoTable.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_INTERVAL_SELECTION);
+        empInfoTable.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        empInfoTable.setShowGrid(true);
+        jScrollPane1.setViewportView(empInfoTable);
 
-        jButton1.setBackground(new java.awt.Color(102, 102, 102));
-        jButton1.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("ADD EMPLOYEE");
+        addEmpButton.setBackground(new java.awt.Color(102, 102, 102));
+        addEmpButton.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
+        addEmpButton.setForeground(new java.awt.Color(255, 255, 255));
+        addEmpButton.setText("ADD EMPLOYEE");
 
-        jButton2.setText("Search");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        searchButton.setText("Search");
+        searchButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                searchButtonActionPerformed(evt);
             }
         });
 
-        jTextField1.setText("employee name/ID no.");
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        searchField.setText("employee name/ID no.");
+        searchField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                searchFieldActionPerformed(evt);
             }
         });
 
-        jButton3.setBackground(new java.awt.Color(102, 102, 102));
-        jButton3.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("ARCHIVE");
+        archiveButton.setBackground(new java.awt.Color(102, 102, 102));
+        archiveButton.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
+        archiveButton.setForeground(new java.awt.Color(255, 255, 255));
+        archiveButton.setText("ARCHIVE");
 
-        jButton4.setBackground(new java.awt.Color(102, 102, 102));
-        jButton4.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(255, 255, 255));
-        jButton4.setText("EDIT");
+        editButton.setBackground(new java.awt.Color(102, 102, 102));
+        editButton.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
+        editButton.setForeground(new java.awt.Color(255, 255, 255));
+        editButton.setText("EDIT");
 
-        jButton5.setBackground(new java.awt.Color(102, 102, 102));
-        jButton5.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(255, 255, 255));
-        jButton5.setText("GENERATE PAYSLIP");
+        generatePayslipButton.setBackground(new java.awt.Color(102, 102, 102));
+        generatePayslipButton.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
+        generatePayslipButton.setForeground(new java.awt.Color(255, 255, 255));
+        generatePayslipButton.setText("GENERATE PAYSLIP");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -163,11 +163,11 @@ public class HR extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(6, 6, 6)
-                        .addComponent(jButton1)
+                        .addComponent(addEmpButton)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton3)
+                        .addComponent(archiveButton)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton4)
+                        .addComponent(editButton)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -177,11 +177,11 @@ public class HR extends javax.swing.JFrame {
                                 .addGap(0, 0, Short.MAX_VALUE)))
                         .addContainerGap())
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(jButton2)
+                        .addComponent(searchButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(searchField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton5)
+                        .addComponent(generatePayslipButton)
                         .addGap(16, 16, 16))))
         );
         jPanel3Layout.setVerticalGroup(
@@ -191,16 +191,16 @@ public class HR extends javax.swing.JFrame {
                 .addComponent(jLabel2)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton5))
+                    .addComponent(searchButton)
+                    .addComponent(searchField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(generatePayslipButton))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 335, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton3)
-                    .addComponent(jButton4))
+                    .addComponent(addEmpButton)
+                    .addComponent(archiveButton)
+                    .addComponent(editButton))
                 .addContainerGap(19, Short.MAX_VALUE))
         );
 
@@ -227,13 +227,13 @@ public class HR extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void searchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_searchButtonActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void searchFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_searchFieldActionPerformed
 
     /**
      * @param args the command line arguments
@@ -271,11 +271,11 @@ public class HR extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
+    private javax.swing.JButton addEmpButton;
+    private javax.swing.JButton archiveButton;
+    private javax.swing.JButton editButton;
+    private javax.swing.JTable empInfoTable;
+    private javax.swing.JButton generatePayslipButton;
     private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -283,7 +283,7 @@ public class HR extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JButton searchButton;
+    private javax.swing.JTextField searchField;
     // End of variables declaration//GEN-END:variables
 }
