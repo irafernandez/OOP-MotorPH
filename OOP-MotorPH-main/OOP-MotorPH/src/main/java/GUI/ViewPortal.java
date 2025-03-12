@@ -1,6 +1,8 @@
 package GUI;
 
+import OOP.Employee;
 import javax.swing.JFrame;
+import javax.swing.table.TableModel;
 
 public class ViewPortal extends javax.swing.JFrame {
 
@@ -334,7 +336,7 @@ public class ViewPortal extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(2, 2, 2)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 811, Short.MAX_VALUE)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 812, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(2, 2, 2)
@@ -387,9 +389,56 @@ public class ViewPortal extends javax.swing.JFrame {
     }//GEN-LAST:event_LogOutButtonActionPerformed
 
     private void viewEmployeeTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_viewEmployeeTableMouseClicked
+                                
+            int row = viewEmployeeTable.getSelectedRow();
+            TableModel model = viewEmployeeTable.getModel();
+
+            // Create an Employee object using the selected row
+            Employee employee = new Employee(model, row);
+
+            ViewInformation updvw = new ViewInformation();
+            updvw.setVisible(true);
+           
+            
+            // Populate update view (updvw) with retrieved values
+            updvw.setVisible(true);
+            updvw.pack();
+            updvw.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+
+            updvw.employeeNumber.setText(employee.getEmployeeNumber());
+            updvw.lastName.setText(employee.getLastName());
+            updvw.firstName.setText(employee.getFirstName());
+
+            updvw.sss.setText(employee.getSssNumber());
+            updvw.philHealth.setText(employee.getPhilHealthNumber());
+            updvw.tin.setText(employee.getTinNumber());
+            updvw.pagIBIG.setText(employee.getPagIbigNumber());
+
+            updvw.birthday.setText(employee.getBirthday());
+            updvw.phoneNumber.setText(employee.getContactNumber());
+            updvw.address.setText(employee.getAddress());
+
+            updvw.status.setText(employee.getStatus());
+            updvw.position.setText(getValue(model, row, 11)); // Position
+            updvw.immediateSupervisor.setText(getValue(model, row, 12)); // Supervisor
+
+            updvw.basicSalary.setText(getValue(model, row, 13));
+            updvw.riceSub.setText(getValue(model, row, 14));
+            updvw.phoneAllowance.setText(getValue(model, row, 15));
+            updvw.clothingAllowance.setText(getValue(model, row, 16));
+            
+            updvw.monthlyRate.setText(getValue(model, row, 17)); // Gross Rate
+            updvw.hourlyRate.setText(String.valueOf((int) employee.getHourlyRate()));
+            
             
     }//GEN-LAST:event_viewEmployeeTableMouseClicked
 
+        private String getValue(TableModel model, int row, int column) {
+            // Retrieve value from the specified row and column in the table model
+            Object value = model.getValueAt(row, column);
+            return value != null ? value.toString() : ""; // Return value as string, handling null case
+        }
+    
     private void generateDetailsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generateDetailsActionPerformed
  
     }//GEN-LAST:event_generateDetailsActionPerformed

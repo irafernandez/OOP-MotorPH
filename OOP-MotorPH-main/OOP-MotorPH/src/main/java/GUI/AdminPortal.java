@@ -1,6 +1,11 @@
 package GUI;
 
+import OOP.Admin;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import javax.swing.JFrame;
+import javax.swing.table.DefaultTableModel;
 
 public class AdminPortal extends javax.swing.JFrame {
     
@@ -298,10 +303,11 @@ public class AdminPortal extends javax.swing.JFrame {
     }//GEN-LAST:event_DraggingMousePressed
 
     private void ViewEmpDetailsPortalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ViewEmpDetailsPortalActionPerformed
-       
-        ViewPortal frame = new ViewPortal();
-        frame.setVisible(true);
-        dispose();
+                                                       
+        ViewPortal viewPortal = new ViewPortal();  // Create instance
+        Admin admin = new Admin("", ""); 
+        admin.viewEmployeeData(viewPortal);  // Pass the instance
+        viewPortal.setVisible(true);  
         
     }//GEN-LAST:event_ViewEmpDetailsPortalActionPerformed
 

@@ -26,6 +26,7 @@ public class EmployeePortal extends javax.swing.JFrame {
         pagIbigField.setText(details[12]);
         philHealthField.setText(details[13]);
         tinField.setText(details[14]);
+        
     }
 
     
@@ -54,15 +55,12 @@ public class EmployeePortal extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         addressField = new javax.swing.JTextPane();
         jScrollPane2 = new javax.swing.JScrollPane();
         contactField = new javax.swing.JTextPane();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        emailField = new javax.swing.JTextPane();
         jScrollPane4 = new javax.swing.JScrollPane();
         statusField = new javax.swing.JTextPane();
         jScrollPane5 = new javax.swing.JScrollPane();
@@ -176,8 +174,6 @@ public class EmployeePortal extends javax.swing.JFrame {
 
         jLabel7.setText("Status:");
 
-        jLabel8.setText("Email:");
-
         jLabel9.setText("Contact No.:");
 
         jLabel10.setText("Current address: ");
@@ -185,8 +181,6 @@ public class EmployeePortal extends javax.swing.JFrame {
         jScrollPane1.setViewportView(addressField);
 
         jScrollPane2.setViewportView(contactField);
-
-        jScrollPane3.setViewportView(emailField);
 
         jScrollPane4.setViewportView(statusField);
 
@@ -208,7 +202,6 @@ public class EmployeePortal extends javax.swing.JFrame {
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel10)
                             .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -220,7 +213,6 @@ public class EmployeePortal extends javax.swing.JFrame {
                             .addComponent(jScrollPane6)
                             .addComponent(jScrollPane5)
                             .addComponent(jScrollPane4)
-                            .addComponent(jScrollPane3)
                             .addComponent(jScrollPane2))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
@@ -250,11 +242,7 @@ public class EmployeePortal extends javax.swing.JFrame {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel7)
                     .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel8)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(12, 12, 12)
+                .addGap(44, 44, 44)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel9)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -583,7 +571,6 @@ public class EmployeePortal extends javax.swing.JFrame {
     public javax.swing.JTextPane birthdayField;
     public javax.swing.JTextPane clothingField;
     public javax.swing.JTextPane contactField;
-    public javax.swing.JTextPane emailField;
     public javax.swing.JTextPane firstNameField;
     public javax.swing.JTextPane hourlyRateField;
     private javax.swing.JLabel jLabel1;
@@ -605,7 +592,6 @@ public class EmployeePortal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
@@ -622,7 +608,6 @@ public class EmployeePortal extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane15;
     private javax.swing.JScrollPane jScrollPane16;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;

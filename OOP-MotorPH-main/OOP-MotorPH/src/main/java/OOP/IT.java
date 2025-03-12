@@ -4,10 +4,13 @@ import GUI.*;
 import javax.swing.*;
 import java.io.*;
 
-public class IT {
+public class IT extends User {
+        public IT(String email, String password, String role) {
+            super(email, password, role);
+    }
     
     //This won't be changed since it's final :)
-    private static final String EMPLOYEE_CSV = "C:\\Users\\vvele\\Downloads\\OOP-MotorPH\\OOP-MotorPH-main\\OOP-MotorPH\\src\\main\\java\\CSV\\EmpData.csv";
+    static final String EMPLOYEE_CSV = "C:\\Users\\vvele\\Downloads\\OOP-MotorPH\\OOP-MotorPH-main\\OOP-MotorPH\\src\\main\\java\\CSV\\EmpData.csv";
     private static final String ADMIN_CSV = "C:\\Users\\vvele\\Downloads\\OOP-MotorPH\\OOP-MotorPH-main\\OOP-MotorPH\\src\\main\\java\\CSV\\AdminLogin.csv";
     private static final String HR_CSV = "C:\\Users\\vvele\\Downloads\\OOP-MotorPH\\OOP-MotorPH-main\\OOP-MotorPH\\src\\main\\java\\CSV\\HRLogin.csv";
     private static final String FINANCE_CSV = "C:\\Users\\vvele\\Downloads\\OOP-MotorPH\\OOP-MotorPH-main\\OOP-MotorPH\\src\\main\\java\\CSV\\FinanceLogin.csv";
