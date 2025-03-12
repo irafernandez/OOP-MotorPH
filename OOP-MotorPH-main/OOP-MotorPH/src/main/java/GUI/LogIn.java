@@ -6,11 +6,12 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
+import OOP.IT;
+import javax.swing.JOptionPane;
 
 public class LogIn extends javax.swing.JFrame{
 
     int xMouse, yMouse;
-    IT itReader = new IT("C:\\Users\\vvele\\Downloads\\Computer-Programming-2\\OOP-MotorPH\\src\\main\\java\\CSV\\Datalogincsv.csv");
     
     public LogIn() {
         initComponents();
@@ -338,21 +339,17 @@ public class LogIn extends javax.swing.JFrame{
     }//GEN-LAST:event_viewPasswordActionPerformed
 
     private void LogInButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogInButtonActionPerformed
+          
         String email = emailField.getText();
         String password = new String(passwordField.getPassword());
 
-        try {
-            if (itReader.authenticateUser(email, password)) {
-                JOptionPane.showMessageDialog(this, "Login successful!");
-                AdminPortal admin = new AdminPortal();
-                admin.setVisible(true);
-                dispose();
-            } else {
-                JOptionPane.showMessageDialog(this, "Invalid email or password.");
-            }
-        } catch (IOException ioException) {
-            JOptionPane.showMessageDialog(this, "Error reading the user data.");
+        if (email.isEmpty() || password.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Please enter both email and password.", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
         }
+
+        IT.validateLogin(email, password, this);
+    
     }//GEN-LAST:event_LogInButtonActionPerformed
 
     /**

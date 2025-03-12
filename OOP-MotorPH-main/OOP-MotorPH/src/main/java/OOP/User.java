@@ -1,18 +1,14 @@
 package OOP;
 
 public class User {
-    private String userNumber;
     private String email;
     private String password;
+    private String role;
 
-    public User(String userNumber, String email, String password) {
-        this.userNumber = userNumber;
+    public User(String email, String password, String role) {
         this.email = email;
         this.password = password;
-    }
-
-    public String getUserNumber() {
-        return userNumber;
+        this.role = role;
     }
 
     public String getEmail() {
@@ -21,5 +17,9 @@ public class User {
 
     public String getPassword() {
         return password;
+    }
+
+    public String getRole() {
+        return role;
     }
 }

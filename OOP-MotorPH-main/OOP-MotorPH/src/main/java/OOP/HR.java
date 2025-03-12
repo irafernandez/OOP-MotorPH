@@ -1,13 +1,16 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package OOP;
 
-/**
- *
- * @author Ira
- */
-public class HR {
-    
+public class HR extends User {
+    public HR(String email, String password) {
+        super(email, password, "HR");
+    }
+
+    public void approveLeave(String employeeID) {
+        //input
+    }
+
+    public void rejectLeave(String employeeID) {
+        System.out.println("Leave rejected for Employee ID: " + employeeID);
+    }
 }
+

@@ -1,13 +1,18 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package OOP;
 
-/**
- *
- * @author Ira
- */
-public class Finance {
-    
+public class Finance extends User {
+    public Finance(String email, String password) {
+        super(email, password, "Finance");
+    }
+
+    public void processPayroll() {
+        //put the processing payroll code here ^-^
+    }
+
+    public void generatePayslips() {
+        //input the generate payslip code here
+    }
 }
+
+
+
