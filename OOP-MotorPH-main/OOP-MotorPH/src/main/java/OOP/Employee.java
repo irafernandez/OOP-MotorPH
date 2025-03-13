@@ -1,5 +1,7 @@
 package OOP;
 
+import GUI.EmployeePortal;
+import GUI.LogIn;
 import javax.swing.table.TableModel;
 
 public class Employee extends User {

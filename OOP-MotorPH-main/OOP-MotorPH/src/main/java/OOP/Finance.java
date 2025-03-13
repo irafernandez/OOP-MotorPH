@@ -5,14 +5,17 @@ public class Finance extends User {
         super(email, password, "Finance");
     }
 
+
     public void processPayroll() {
-        //put the processing payroll code here ^-^
+        System.out.println("Processing payroll...");
     }
 
     public void generatePayslips() {
-        //input the generate payslip code here
+        System.out.println("Generating payslips...");
     }
 }
+
+
 
 
 

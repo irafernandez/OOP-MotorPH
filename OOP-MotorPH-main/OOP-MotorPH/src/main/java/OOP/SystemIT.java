@@ -4,19 +4,16 @@ import GUI.*;
 import javax.swing.*;
 import java.io.*;
 
-public class IT extends User {
-        public IT(String email, String password, String role) {
-            super(email, password, role);
-    }
-    
-    //This won't be changed since it's final :)
-    static final String EMPLOYEE_CSV = "C:\\Users\\vvele\\Downloads\\OOP-MotorPH\\OOP-MotorPH-main\\OOP-MotorPH\\src\\main\\java\\CSV\\EmpData.csv";
+public class SystemIT extends User {
+    public static final String EMPLOYEE_CSV = "C:\\Users\\vvele\\Downloads\\OOP-MotorPH\\OOP-MotorPH-main\\OOP-MotorPH\\src\\main\\java\\CSV\\EmpData.csv";
     private static final String ADMIN_CSV = "C:\\Users\\vvele\\Downloads\\OOP-MotorPH\\OOP-MotorPH-main\\OOP-MotorPH\\src\\main\\java\\CSV\\AdminLogin.csv";
     private static final String HR_CSV = "C:\\Users\\vvele\\Downloads\\OOP-MotorPH\\OOP-MotorPH-main\\OOP-MotorPH\\src\\main\\java\\CSV\\HRLogin.csv";
     private static final String FINANCE_CSV = "C:\\Users\\vvele\\Downloads\\OOP-MotorPH\\OOP-MotorPH-main\\OOP-MotorPH\\src\\main\\java\\CSV\\FinanceLogin.csv";
 
-    
-    //Method for redirecting the users to their designated GUI frame
+    public SystemIT(String email, String password, String role) {
+        super(email, password, role);
+    }
+
     public static void validateLogin(String email, String password, JFrame loginFrame) {
         if (checkCredentials(ADMIN_CSV, email, password)) {
             redirectToPortal(new Admin(email, password), new AdminPortal(), "Admin", loginFrame);
@@ -37,13 +34,13 @@ public class IT extends User {
     private static boolean checkCredentials(String filePath, String email, String password) {
         try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
             String line;
-            boolean isFirstLine = true; //Skip the header from the csv :D
+            boolean isFirstLine = true;
             while ((line = br.readLine()) != null) {
-                if (isFirstLine) { 
-                    isFirstLine = false; 
-                    continue; 
+                if (isFirstLine) {
+                    isFirstLine = false;
+                    continue;
                 }
-                String[] values = line.split(","); 
+                String[] values = line.split(",");
                 if (values.length > 1 && values[0].trim().equals(email) && values[1].trim().equals(password)) {
                     return true;
                 }
@@ -59,17 +56,14 @@ public class IT extends User {
             String line;
             boolean isFirstLine = true;
             while ((line = br.readLine()) != null) {
-                if (isFirstLine) { 
-                    isFirstLine = false; 
-                    continue; 
+                if (isFirstLine) {
+                    isFirstLine = false;
+                    continue;
                 }
 
-                // Parsing with handling for commas inside quotes
                 String[] values = line.split(",(?=([^\"]*\"[^\"]*\")*[^\"]*$)");
-
-                // Trim and clean values
                 for (int i = 0; i < values.length; i++) {
-                    values[i] = values[i].replaceAll("^\"|\"$", "").trim(); // Remove quotes
+                    values[i] = values[i].replaceAll("^\"|\"$", "").trim();
                 }
 
                 if (values.length > 20 && values[19].equals(email) && values[20].equals(password)) {
@@ -78,7 +72,7 @@ public class IT extends User {
                             values[19], values[20],
                             values[0], values[1], values[2], values[7], values[10],
                             values[9], values[8], 
-                            Double.parseDouble(values[13].replace(",", "")),  // Handle "60,000"
+                            Double.parseDouble(values[13].replace(",", "")),  
                             Double.parseDouble(values[18].replace(",", "")),  
                             Double.parseDouble(values[14].replace(",", "")),  
                             Double.parseDouble(values[15].replace(",", "")),  
@@ -101,7 +95,7 @@ public class IT extends User {
         portal.setVisible(true);
         loginFrame.dispose();
     }
-    //showing the employee portal if the entered email and password are from employee csv
+
     private static void showEmployeePortal(Employee employee, JFrame loginFrame) {
         EmployeePortal frame = new EmployeePortal();
         frame.fillEmployeeDetails(employee);

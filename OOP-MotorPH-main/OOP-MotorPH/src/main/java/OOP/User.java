@@ -1,6 +1,6 @@
-package OOP;
+package OOP; 
 
-public class User {
+public abstract class User {
     private String email;
     private String password;
     private String role;
@@ -23,3 +23,4 @@ public class User {
         return role;
     }
 }
+

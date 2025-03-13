@@ -1,6 +1,7 @@
 package GUI;
 
 import OOP.Admin;
+import OOP.SystemIT;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -312,7 +313,34 @@ public class AdminPortal extends javax.swing.JFrame {
     }//GEN-LAST:event_ViewEmpDetailsPortalActionPerformed
 
     private void UpdateEmpDetailsPortalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UpdateEmpDetailsPortalActionPerformed
-        // TODO add your handling code here:
+            UpdateInfo portal = new UpdateInfo();
+
+            DefaultTableModel model = (DefaultTableModel) portal.updateTable.getModel();
+
+            // Use SystemIT.EMPLOYEE_CSV instead of hardcoding the file path
+            String filePath = SystemIT.EMPLOYEE_CSV;
+
+            try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
+                String line;
+                boolean isFirstRow = true; // Skip header row
+
+                // Read each line from the CSV file
+                while ((line = br.readLine()) != null) {
+                    if (isFirstRow) {
+                        isFirstRow = false; // Skip the header row
+                        continue;
+                    }
+                    String[] data = line.split(",(?=([^\"]*\"[^\"]*\")*[^\"]*$)");
+                    // Add the data row to the table model
+                    model.addRow(data);
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            // Make the Update frame visible and close the current frame
+            portal.setVisible(true);
+            dispose();
     }//GEN-LAST:event_UpdateEmpDetailsPortalActionPerformed
 
     private void LogOutButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogOutButtonActionPerformed

@@ -1,4 +1,4 @@
-package GUI;
+  package GUI;
 
 import OOP.Employee;
 import javax.swing.JFrame;
@@ -28,7 +28,6 @@ public class EmployeePortal extends javax.swing.JFrame {
         tinField.setText(details[14]);
         
     }
-
     
     public EmployeePortal() {
         initComponents();

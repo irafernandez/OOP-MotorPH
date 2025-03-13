@@ -6,11 +6,12 @@ public class HR extends User {
     }
 
     public void approveLeave(String employeeID) {
-        //input
+        System.out.println("Leave approved for Employee ID: " + employeeID);
     }
 
     public void rejectLeave(String employeeID) {
         System.out.println("Leave rejected for Employee ID: " + employeeID);
     }
 }
+
 

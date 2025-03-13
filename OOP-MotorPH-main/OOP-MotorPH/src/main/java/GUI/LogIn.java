@@ -1,12 +1,12 @@
 package GUI;
 
-import OOP.IT;
+import OOP.SystemIT;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
-import OOP.IT;
+import OOP.SystemIT;
 import javax.swing.JOptionPane;
 
 public class LogIn extends javax.swing.JFrame{
@@ -348,7 +348,7 @@ public class LogIn extends javax.swing.JFrame{
             return;
         }
 
-        IT.validateLogin(email, password, this);
+        SystemIT.validateLogin(email, password, this);
     
     }//GEN-LAST:event_LogInButtonActionPerformed
 
