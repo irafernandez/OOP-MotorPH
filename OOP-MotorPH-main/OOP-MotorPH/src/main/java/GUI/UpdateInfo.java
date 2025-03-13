@@ -266,9 +266,9 @@ public class UpdateInfo extends javax.swing.JFrame {
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Address:");
 
-        updateButton.setBackground(new java.awt.Color(0, 51, 102));
+        updateButton.setBackground(new java.awt.Color(255, 255, 255));
         updateButton.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        updateButton.setForeground(new java.awt.Color(255, 255, 255));
+        updateButton.setForeground(new java.awt.Color(0, 0, 0));
         updateButton.setText("Update");
         updateButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
