@@ -12,7 +12,7 @@ public class Admin extends SystemIT {
         super(email, password, "Admin");
     }
 
-    // ✅ Handles JTable click event and populates text fields (Removing Quotes for UI)
+    // Handles JTable click event and populates text fields (Removing Quotes for UI)
     public void populateFieldsFromTable(JTable jTable1, JTextField[] textFields, JLabel emailLabel, JLabel passwordLabel) {
         int row = jTable1.getSelectedRow();
         if (row == -1) {
@@ -22,7 +22,7 @@ public class Admin extends SystemIT {
 
         TableModel model = jTable1.getModel();
 
-        // ✅ Populate JTextFields, removing quotes where necessary
+        // Populate JTextFields, removing quotes where necessary
         textFields[0].setText(getValue(model, row, 0));  // Employee Number
         textFields[1].setText(getValue(model, row, 1));  // Last Name
         textFields[2].setText(getValue(model, row, 2));  // First Name
@@ -35,7 +35,7 @@ public class Admin extends SystemIT {
         textFields[9].setText(getValue(model, row, 9));  // Phone Number
         textFields[10].setText(getValue(model, row, 10)); // Status
         textFields[11].setText(getValue(model, row, 11)); // Position
-        textFields[12].setText(removeQuotes(getValue(model, row, 12))); // Immediate Supervisor (Now Removes Quotes)
+        textFields[12].setText(removeQuotes(getValue(model, row, 12))); // Immediate Supervisor (Removes Quotes  to reduce error :D)
         textFields[13].setText(removeQuotes(getValue(model, row, 13))); // Basic Salary
         textFields[14].setText(removeQuotes(getValue(model, row, 14))); // Rice Subsidy
         textFields[15].setText(removeQuotes(getValue(model, row, 15))); // Phone Allowance
@@ -43,12 +43,12 @@ public class Admin extends SystemIT {
         textFields[17].setText(removeQuotes(getValue(model, row, 17))); // Monthly Rate
         textFields[18].setText(getValue(model, row, 18)); // Hourly Rate
 
-        // ✅ Hidden fields (Email & Password)
+        // Hidden fields (Email & Password)
         emailLabel.setText(getValue(model, row, 19));
         passwordLabel.setText(getValue(model, row, 20));
     }
 
-    // ✅ Handles updating employee details (Restoring Quotes for CSV)
+    // Handles updating employee details (Restoring Quotes for CSV)
     public void updateEmployeeDetails(JTable jTable1, JTextField[] textFields, JLabel emailLabel, JLabel passwordLabel) {
         int selectedRow = jTable1.getSelectedRow();
         if (selectedRow == -1) {
@@ -56,7 +56,7 @@ public class Admin extends SystemIT {
             return;
         }
 
-        // ✅ Extract values from text fields and RESTORE QUOTES where necessary
+        // Extract values from text fields and RESTORE QUOTES where necessary
         String[] newValues = new String[textFields.length];
         for (int i = 0; i < textFields.length; i++) {
             // Fields that need quotes when saving to CSV
@@ -70,13 +70,13 @@ public class Admin extends SystemIT {
         String email = emailLabel.getText().trim();
         String password = passwordLabel.getText().trim();
 
-        // ✅ Check for duplicate Employee Number
+        // Check for duplicate Employee Number
         if (isEmployeeNumberDuplicate(jTable1, newValues[0], selectedRow)) {
             JOptionPane.showMessageDialog(null, "Employee number already exists.", "Error", JOptionPane.ERROR_MESSAGE);
             return;
         }
 
-        // ✅ Update JTable with new values
+        //  Update JTable with new values
         DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
         for (int i = 0; i < newValues.length; i++) {
             model.setValueAt(newValues[i], selectedRow, i);
@@ -84,7 +84,7 @@ public class Admin extends SystemIT {
         model.setValueAt(email, selectedRow, 19);
         model.setValueAt(password, selectedRow, 20);
 
-        // ✅ Save updated data to CSV
+        // Save updated data to CSV
         int option = JOptionPane.showConfirmDialog(null, "Confirm update?", "Confirm", JOptionPane.YES_NO_OPTION);
         if (option == JOptionPane.YES_OPTION) {
             try {
@@ -96,7 +96,7 @@ public class Admin extends SystemIT {
         }
     }
 
-    // ✅ Saves updated data to CSV
+    //  Saves updated data to CSV
     private void saveDataToCSV(TableModel model, String filePath) throws IOException {
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(filePath))) {
             for (int j = 0; j < model.getColumnCount(); j++) {
@@ -119,10 +119,10 @@ public class Admin extends SystemIT {
         }
     }
 
-    // ✅ Loads employee data into JTable (Preserving Format)
+    //  Loads employee data into JTable (Preserving Format)
     public void viewEmployeeData(ViewPortal frame) {
         DefaultTableModel model = (DefaultTableModel) frame.viewEmployeeTable.getModel();
-        model.setRowCount(0); // ✅ Clear table before loading new data
+        model.setRowCount(0); // Clear table before loading new data
 
         try (BufferedReader br = new BufferedReader(new FileReader(SystemIT.EMPLOYEE_CSV))) {
             String line;
@@ -140,12 +140,12 @@ public class Admin extends SystemIT {
         }
     }
 
-    // ✅ Removes quotes for display in JTextFields
+    //  Removes quotes for display in JTextFields
     private String removeQuotes(String text) {
         return text.replaceAll("^\"|\"$", ""); // Remove only the surrounding quotes
     }
 
-    // ✅ Adds quotes when saving to CSV for Address, Immediate Supervisor, Basic Salary, etc.
+    //  Adds quotes when saving to CSV for Address, Immediate Supervisor, Basic Salary, etc.
     private String addQuotes(String text) {
         if (!text.startsWith("\"") || !text.endsWith("\"")) {
             return "\"" + text + "\""; // Add quotes only if not already present
@@ -153,13 +153,13 @@ public class Admin extends SystemIT {
         return text;
     }
 
-    // ✅ Helper method to get value from JTable
+    //  Helper method to get value from JTable
     private String getValue(TableModel model, int row, int column) {
         Object value = model.getValueAt(row, column);
         return value != null ? value.toString().trim() : "";
     }
 
-    // ✅ Check for duplicate Employee Number
+    //  Check for duplicate Employee Number
     private boolean isEmployeeNumberDuplicate(JTable table, String empNum, int selectedRow) {
         DefaultTableModel model = (DefaultTableModel) table.getModel();
         for (int i = 0; i < model.getRowCount(); i++) {
