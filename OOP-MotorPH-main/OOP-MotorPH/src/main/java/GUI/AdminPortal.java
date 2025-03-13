@@ -313,7 +313,7 @@ public class AdminPortal extends javax.swing.JFrame {
     }//GEN-LAST:event_ViewEmpDetailsPortalActionPerformed
 
     private void UpdateEmpDetailsPortalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UpdateEmpDetailsPortalActionPerformed
-            UpdateInfo portal = new UpdateInfo();
+            AdminHRPortal portal = new AdminHRPortal();
 
             DefaultTableModel model = (DefaultTableModel) portal.updateTable.getModel();
 

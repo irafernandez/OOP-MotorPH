@@ -95,7 +95,7 @@ public class Employee extends User {
             lastName, firstName, birthday, status, contactNumber, address,
             String.valueOf(basicSalary), String.valueOf(hourlyRate),
             String.valueOf(riceSubsidy), String.valueOf(phoneSubsidy), String.valueOf(clothingAllowance),
-            sssNumber, pagIbigNumber, philHealthNumber, tinNumber
+            sssNumber, pagIbigNumber, philHealthNumber, tinNumber, employeeNumber
         };
     }
 }

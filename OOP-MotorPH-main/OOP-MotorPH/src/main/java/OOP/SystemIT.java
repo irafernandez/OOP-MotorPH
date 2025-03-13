@@ -7,7 +7,7 @@ import java.io.*;
 public class SystemIT extends User {
     public static final String EMPLOYEE_CSV = "C:\\Users\\vvele\\Downloads\\OOP-MotorPH\\OOP-MotorPH-main\\OOP-MotorPH\\src\\main\\java\\CSV\\EmpData.csv";
     private static final String ADMIN_CSV = "C:\\Users\\vvele\\Downloads\\OOP-MotorPH\\OOP-MotorPH-main\\OOP-MotorPH\\src\\main\\java\\CSV\\AdminLogin.csv";
-    private static final String HR_CSV = "C:\\Users\\vvele\\Downloads\\OOP-MotorPH\\OOP-MotorPH-main\\OOP-MotorPH\\src\\main\\java\\CSV\\HRLogin.csv";
+    public static final String HR_CSV = "C:\\Users\\vvele\\Downloads\\OOP-MotorPH\\OOP-MotorPH-main\\OOP-MotorPH\\src\\main\\java\\CSV\\HRLogin.csv";
     private static final String FINANCE_CSV = "C:\\Users\\vvele\\Downloads\\OOP-MotorPH\\OOP-MotorPH-main\\OOP-MotorPH\\src\\main\\java\\CSV\\FinanceLogin.csv";
 
     public SystemIT(String email, String password, String role) {
@@ -55,39 +55,52 @@ public class SystemIT extends User {
         try (BufferedReader br = new BufferedReader(new FileReader(EMPLOYEE_CSV))) {
             String line;
             boolean isFirstLine = true;
+            int lineNumber = 0;  // Track line numbers for debugging
+
             while ((line = br.readLine()) != null) {
+                lineNumber++;
+
                 if (isFirstLine) {
                     isFirstLine = false;
                     continue;
                 }
 
                 String[] values = line.split(",(?=([^\"]*\"[^\"]*\")*[^\"]*$)");
+
+                // Trim quotes and whitespace
                 for (int i = 0; i < values.length; i++) {
                     values[i] = values[i].replaceAll("^\"|\"$", "").trim();
                 }
 
-                if (values.length > 20 && values[19].equals(email) && values[20].equals(password)) {
+                // Ensure we have at least 21 columns before accessing indices
+                if (values.length >= 21 && values[19].equals(email) && values[20].equals(password)) {
                     try {
                         return new Employee(
-                            values[19], values[20],
-                            values[0], values[1], values[2], values[7], values[10],
-                            values[9], values[8], 
-                            Double.parseDouble(values[13].replace(",", "")),  
-                            Double.parseDouble(values[18].replace(",", "")),  
-                            Double.parseDouble(values[14].replace(",", "")),  
-                            Double.parseDouble(values[15].replace(",", "")),  
-                            Double.parseDouble(values[16].replace(",", "")),  
-                            values[3], values[6], values[4], values[5]
+                            values[19], values[20],  // Email & Password
+                            values[0], values[1], values[2],  // Employee Number, Last Name, First Name
+                            values[7], values[10],   // Birthday, Status
+                            values[9], values[8],    // Phone Number, Address
+                            parseDoubleSafe(values[13]),  // Basic Salary
+                            parseDoubleSafe(values[18]),  // Hourly Rate
+                            parseDoubleSafe(values[14]),  // Rice Subsidy
+                            parseDoubleSafe(values[15]),  // Phone Allowance
+                            parseDoubleSafe(values[16]),  // Clothing Allowance
+                            values[3], values[6], values[4], values[5] // SSS, Pag-IBIG, PhilHealth, TIN Number
                         );
                     } catch (NumberFormatException e) {
-                        System.err.println("Error parsing numeric values in CSV: " + e.getMessage());
+                        System.err.println("Error parsing numeric values at line " + lineNumber + ": " + e.getMessage());
                     }
                 }
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            System.err.println("Error reading CSV file: " + e.getMessage());
         }
         return null;
+    }
+
+        private static double parseDoubleSafe(String value) {
+        if (value == null || value.isEmpty()) return 0.0;  // Default to 0 if empty
+        return Double.parseDouble(value.replace(",", "")); // Remove commas and parse
     }
 
     private static void redirectToPortal(User user, JFrame portal, String role, JFrame loginFrame) {
