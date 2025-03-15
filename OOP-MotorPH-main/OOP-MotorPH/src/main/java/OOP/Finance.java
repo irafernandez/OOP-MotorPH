@@ -6,16 +6,8 @@ public class Finance extends User {
     }
 
 
-    public void processPayroll() {
-        System.out.println("Processing payroll...");
+    public void calculateSalary() {
+        
     }
 
-    public void generatePayslips() {
-        System.out.println("Generating payslips...");
-    }
 }
-
-
-
-
-
